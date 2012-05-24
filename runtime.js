@@ -1,4 +1,3 @@
-
 jade = (function(exports){
 /*!
  * Jade - runtime
@@ -175,4 +174,10 @@ exports.rethrow = function rethrow(err, filename, lineno){
 
   return exports;
 
-})({});
+};
+
+if (module == null) { 
+  jade({});  
+} else {
+  jade(module.exports);
+}
